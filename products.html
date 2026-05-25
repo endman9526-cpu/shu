@@ -134,6 +134,72 @@
     }
     @media(max-width:480px){
       .scene-grid { grid-template-columns: 1fr; }
+      .saas-img-wrap { margin: 20px 0 28px; }
+      .saas-platform-img { border-radius: var(--radius-md); }
+    }
+
+    /* 核心功能卡片 */
+    .saas-img-wrap {
+      margin: 36px 0 48px;
+      display: flex;
+      justify-content: center;
+    }
+    .saas-platform-img {
+      max-width: 900px;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+    .core-func-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .core-func-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .core-func-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .core-func-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    @media(max-width:767px){
+      .core-func-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .core-func-item {
+        gap: 12px;
+      }
+      .core-func-title {
+        font-size: 17px;
+        margin-bottom: 6px;
+      }
+      .core-func-desc {
+        font-size: 13px;
+        line-height: 1.7;
+      }
+    }
+    @media(max-width:480px){
+      .core-func-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .core-func-title {
+        font-size: 16px;
+      }
+      .core-func-desc {
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -293,52 +359,52 @@
       <div class="section-divider" style="margin:20px auto 20px"></div>
     </div>
 
-    <div style="margin:36px 0 48px;display:flex;justify-content:center" class="fade-up">
-      <img src="assets/images/saas-platform.png" alt="SaaS控制台与微信小程序" style="max-width:900px;width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);display:block">
+    <div class="saas-img-wrap fade-up">
+      <img src="assets/images/saas-platform.png" alt="SaaS控制台与微信小程序" class="saas-platform-img">
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div class="core-func-grid">
       <div class="card fade-up">
-        <div style="display:flex;gap:16px;align-items:flex-start">
+        <div class="core-func-item">
           <div class="feature-icon-circle" style="width:52px;height:52px;flex-shrink:0">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C41230" stroke-width="2" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <div>
-            <h3 style="font-size:20px;margin-bottom:8px">全自动智能注油</h3>
-            <p style="font-size:14px;color:var(--text-muted);line-height:1.8">内置智能控制芯片，根据预设参数全自动执行注油任务。支持1-999小时周期灵活设定，无需人工介入，实现真正的无人值守润滑管理。电机驱动无孔高压活塞，最大输出压力10 Bar。</p>
+            <h3 class="core-func-title">全自动智能注油</h3>
+            <p class="core-func-desc">内置智能控制芯片，根据预设参数全自动执行注油任务。支持1-999小时周期灵活设定，无需人工介入，实现真正的无人值守润滑管理。电机驱动无孔高压活塞，最大输出压力10 Bar。</p>
           </div>
         </div>
       </div>
       <div class="card fade-up fade-up-delay-1">
-        <div style="display:flex;gap:16px;align-items:flex-start">
+        <div class="core-func-item">
           <div class="feature-icon-circle blue" style="width:52px;height:52px;flex-shrink:0;background:rgba(30,111,222,0.08);border-color:rgba(30,111,222,0.2)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1E6FDE" stroke-width="2" width="26" height="26"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
           <div>
-            <h3 style="font-size:20px;margin-bottom:8px">远程监控平台</h3>
-            <p style="font-size:14px;color:var(--text-muted);line-height:1.8">内置4G通讯模块，实时上传设备运行状态到云平台。可通过手机APP或电脑网页远程查看油位、温度、运行状态，支持异常自动推送预警，让管理者随时掌握设备健康状况。</p>
+            <h3 class="core-func-title">远程监控平台</h3>
+            <p class="core-func-desc">内置4G通讯模块，实时上传设备运行状态到云平台。可通过手机APP或电脑网页远程查看油位、温度、运行状态，支持异常自动推送预警，让管理者随时掌握设备健康状况。</p>
           </div>
         </div>
       </div>
       <div class="card fade-up fade-up-delay-2">
-        <div style="display:flex;gap:16px;align-items:flex-start">
+        <div class="core-func-item">
           <div class="feature-icon-circle" style="width:52px;height:52px;flex-shrink:0">
             <svg viewBox="0 0 24 24" fill="none" stroke="#C41230" stroke-width="2" width="26" height="26"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg>
           </div>
           <div>
-            <h3 style="font-size:20px;margin-bottom:8px">定时定量注油</h3>
-            <p style="font-size:14px;color:var(--text-muted);line-height:1.8">支持精确设置注油周期（1-999h）和单次注油量（0.78-500ml），根据设备实际需求精确控制用油量。避免传统人工加油的随意性和不一致性，确保每次润滑都达到最佳效果。</p>
+            <h3 class="core-func-title">定时定量注油</h3>
+            <p class="core-func-desc">支持精确设置注油周期（1-999h）和单次注油量（0.78-500ml），根据设备实际需求精确控制用油量。避免传统人工加油的随意性和不一致性，确保每次润滑都达到最佳效果。</p>
           </div>
         </div>
       </div>
       <div class="card fade-up fade-up-delay-3">
-        <div style="display:flex;gap:16px;align-items:flex-start">
+        <div class="core-func-item">
           <div class="feature-icon-circle blue" style="width:52px;height:52px;flex-shrink:0;background:rgba(30,111,222,0.08);border-color:rgba(30,111,222,0.2)">
             <svg viewBox="0 0 24 24" fill="none" stroke="#1E6FDE" stroke-width="2" width="26" height="26"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <h3 style="font-size:20px;margin-bottom:8px">温度振动监测</h3>
-            <p style="font-size:14px;color:var(--text-muted);line-height:1.8">内置振动传感器和温度传感器，实时监测设备工况，结合运行数据智能调整润滑策略。精确配给减少油脂浪费高达30%，同时保证润滑均匀稳定，延长设备寿命。</p>
+            <h3 class="core-func-title">温度振动监测</h3>
+            <p class="core-func-desc">内置振动传感器和温度传感器，实时监测设备工况，结合运行数据智能调整润滑策略。精确配给减少油脂浪费高达30%，同时保证润滑均匀稳定，延长设备寿命。</p>
           </div>
         </div>
       </div>
